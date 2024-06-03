@@ -1,0 +1,23 @@
+@model TrilhaApiDesafio.Models.Tarefa
+
+<div class="text-center row container-fluid">
+    <form asp-action="Criar">
+        <div class="input-group-prepend d-flex flex-column flex-sm-row align-items-center">
+            <div class="input-group p-4">
+                <label asp-for="Titulo" class="input-group-text"></label>
+                <input asp-for="Titulo" type="text" class="form-control ">
+            </div>
+            <div class="input-group p-4">
+                <label asp-for="Descricao" class="input-group-text"></label>
+                <input asp-for="Descricao" type="text" class="form-control" rows="1" cols="45">
+            </div>
+            <div class="input-group p-4">
+                <label asp-for="Data" class="input-group-text"></label>
+                <input asp-for="Data" type="datetime-local" class="form-control">
+            </div>
+        </div>
+        <div class="p-4 input-group-append">
+            <input type="submit" value="Criar" class="btn btn-primary">
+        </div>
+    </form>
+</div>

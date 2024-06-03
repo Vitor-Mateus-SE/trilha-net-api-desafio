@@ -12,5 +12,19 @@ namespace TrilhaApiDesafio.Models
         public string Descricao { get; set; }
         public DateTime Data { get; set; }
         public EnumStatusTarefa Status { get; set; }
+
+        public void ToggleStatus()
+        {
+            if(Status == EnumStatusTarefa.Pendente)
+            {
+                Status = EnumStatusTarefa.Finalizado;
+            }
+            else
+            {
+                Status = EnumStatusTarefa.Pendente;
+            }
+        }
+
+    
     }
 }
